@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interaction Generator</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Interaction Generator</h1>
+    <form action="/interactions" method="POST">
+    <input type="text" name='type' list='typelist' />
+    <datalist id="typelist">
+        <option>Click Through</option>
+        <option>Sales Order</option>
+        <option>Opportunity</option>
+    </datalist>
+    <button type="submit">Create</button>
+    </form>
+  </body>
+</html>
