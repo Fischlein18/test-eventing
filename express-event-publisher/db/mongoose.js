@@ -2,7 +2,8 @@ const mongoose = require('mongoose')
 
 //url + database name
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://172.17.0.2:27017/score-srv-poc', {
+// mongoose.connect('mongodb://172.17.0.2:27017/score-srv-poc', {
+mongoose.connect('mongodb://mongodb:27017/score-srv-poc', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
