@@ -9,18 +9,23 @@
 ---
 
 ## How to execute the service in your local machine
-1. start mongodb in docker container
-    `sudo docker start mongodb`
+1. pull mongodb image:
+    `sudo docker pull mongo`
 
-2. create docker image of the service
+2. start mongodb in docker container:
+    - (for the first time only) create a /mongodata directory on the host system: `sudo mkdir -p /mongodata`
+    - start container for the first time: `sudo docker run -it -v mongodata:/data/db --name mongodb -d mongo`
+    - restart container: `sudo docker start mongodb`
+
+3. create docker image of the service:
     `sudo docker build -t express-event-publisher .`
 
-3. start the service in docker container
+4. start the service in docker container:
     `sudo docker run -d --link mongodb:mongodb -p 9000:3000 express-event-publisher`
 
-4. start brower: `localhost:9000` 
+5. start brower: `localhost:9000` 
 
-5. to check data in mongodb:
+6. to check data in mongodb:
     - connect to the container bash: `sudo docker exec -it mongodb bash`
     - start mongodb shell: `mongo`
     - select database: `use score-srv-poc`
