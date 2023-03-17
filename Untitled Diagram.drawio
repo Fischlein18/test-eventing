@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-17T07:28:54.349Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="NPZQzqtrl-iFYUFVkhRu" version="20.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-17T12:57:54.074Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="LbFgwCEugwEyaZHwYJNI" version="20.8.5" type="github">
   <diagram id="R2lEEEUBdFMjLlhIrx00" name="Page-1">
-    <mxGraphModel dx="1996" dy="2068" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+    <mxGraphModel dx="1930" dy="1773" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -89,7 +89,7 @@
             <mxRectangle width="30" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="C-vyLk0tnHw3VtMMgP7b-22" value="useCaseId char(50)" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-20" vertex="1">
+        <mxCell id="C-vyLk0tnHw3VtMMgP7b-22" value="eventType char(50)" style="shape=partialRectangle;overflow=hidden;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;" parent="C-vyLk0tnHw3VtMMgP7b-20" vertex="1">
           <mxGeometry x="30" width="210" height="30" as="geometry">
             <mxRectangle width="210" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -300,7 +300,7 @@
         <mxCell id="T6mNrq7GwMT8HL7wEplP-84" value="" style="shape=partialRectangle;top=0;left=0;bottom=0;fillColor=none;stokeWidth=1;dashed=1;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[];portConstraint=eastwest;part=1;" vertex="1" connectable="0" parent="T6mNrq7GwMT8HL7wEplP-83">
           <mxGeometry width="30" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="T6mNrq7GwMT8HL7wEplP-85" value="What the app provides:&lt;br&gt;1. (optional) an admin UI - app admin&amp;nbsp;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register use case (can be imported from other sources)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register action types (can be hard-coded)&lt;br&gt;2. a cockpit UI - use case teams&amp;nbsp;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register event types to be tracked&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register contact persons&amp;nbsp;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register actions (which event, how to behave, to whom)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Prerequisites to register event (type):&lt;br&gt;1. cannot be handled by the standard logging provided by data lake infrastructure&lt;br&gt;2. critical events that the corresponding contacts should immediately know" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
+        <mxCell id="T6mNrq7GwMT8HL7wEplP-85" value="What the app provides:&lt;br&gt;1. (optional) an admin UI - app admin&amp;nbsp;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register use case (can be imported from other sources)&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register action types (can be hard-coded)&lt;br&gt;2. a cockpit UI - use case teams&amp;nbsp;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register event types to be tracked&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register contact persons&amp;nbsp;&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;- register actions (which event, how to behave, to whom)&lt;br&gt;&lt;br&gt;Recommended architecture:&lt;br&gt;---&amp;nbsp;&lt;br&gt;1. event-driven architecture, instead of request driven&lt;br&gt;2. critical events shall not be lost: set up message queue/message bus&lt;br&gt;3. allow configuration, instead of individual implementations&lt;br&gt;&lt;br&gt;Prerequisites to register event (type):&lt;br&gt;1. cannot be handled by the standard logging provided by data lake infrastructure&lt;br&gt;2. critical events that the corresponding contacts should immediately know" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
           <mxGeometry x="-200" y="-200" width="880" height="280" as="geometry" />
         </mxCell>
       </root>
